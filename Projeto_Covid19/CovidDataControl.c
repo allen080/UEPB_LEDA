@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Execucao Apenas em Windows
+
 int main(int argc,char *argv[]){
 	int r;
 	
