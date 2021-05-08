@@ -13,7 +13,7 @@ Este Projeto consiste em Analisarmos uma Planilha de dados dos casos da Covid-19
 4. Entre na sua conta criada e faça download do dataset em [caso.csv](https://brasil.io/dataset/covid19/caso/?is_last=True&format=csv) **(OBS: o dataset foi previamente filtrado para conter apenas os dados mais recentes (É a ultima atualização? = True).**
 5. Renomeie o dataset baixado para **caso.csv**. 
 6. Insira o arquivo **caso.csv** na Pasta **UEPB_LEDA-main/Projeto_Covid19/**.
- ![Alt text](img/csv.png "Title")
+	![Alt text](img/csv.png "Title")
 9. Com isso, o programa poderá ser executado das seguintes formas:
 
 	- **Atalhos Executavéis:**
