@@ -1,13 +1,34 @@
-from os import system
+from os import system,path,mkdir
+from sys import platform
 
-r = system("javac -version 2> nul > nul && java -version 2> nul > nul");	
+def getOS():
+	if "win" in platform:
+		return 1 # WINDOWS
+	elif "linux" in platform: 
+		return 2 # LINUX
+	return 3 # OS X
+
+sistema = getOS()
+
+if sistema==1:
+	trash = "nul"
+	clear = "cls"
+else:
+	trash = "/dev/null"
+	clear = "clear"
+
+r = system(f"javac -version 2> {trash} > {trash} && javad -version 2> {trash} > {trash}");	
+
 if r!=0:
-	system("color c && echo [!] java.exe nao encontrado. Verifique se o Java esta instalado corretamente no seu sistema. && echo. && pause");
+	system(f"echo [!] java.exe nao encontrado. Verifique se o Java esta instalado corretamente no seu sistema. && echo.");
+	input("\nPressione qualquer tecla para finalizar...")
 	exit(1)
 
-system("color f");		
 system("echo [*] Compilando...");
-system("if not exist bin md bin");
-system("javac -d bin src/*.java && cd bin && cls && java Main");
 
-system("pause");
+if not path.isdir("bin"):
+	mkdir("bin")
+
+system(f"javac -d bin src/*.java && cd bin && {clear} && java Main");
+
+input("\nPressione qualquer tecla para finalizar...")
