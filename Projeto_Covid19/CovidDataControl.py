@@ -17,10 +17,10 @@ else:
 	trash = "/dev/null"
 	clear = "clear"
 
-r = system(f"javac -version 2> {trash} > {trash} && javad -version 2> {trash} > {trash}");	
+r = system(f"javac -version 2> {trash} > {trash} && java -version 2> {trash} > {trash}");	
 
 if r!=0:
-	system(f"echo [!] java.exe nao encontrado. Verifique se o Java esta instalado corretamente no seu sistema. && echo.");
+	system(f"echo [!] java nao encontrado. Verifique se o Java esta instalado corretamente no seu sistema.");
 	input("\nPressione qualquer tecla para finalizar...")
 	exit(1)
 
