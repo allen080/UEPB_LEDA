@@ -25,3 +25,10 @@ Este Projeto consiste em Analisarmos uma Planilha de dados dos casos da Covid-19
 			- javac Main.java && java Main
 	- **IDE's:**
 		- Criando um projeto na IDE de sua preferência (que ofereça suporte a linguagem Java) e atribuindo os arquivos contidos na pasta **UEPB_LEDA-main/Projeto_Covid19/src** ao projeto.
+
+## [*] Funcionalidades:
+1. O programa ordenará os dados do **caso.csv** considerando o arquivo original (médio caso), o arquivo invertido (pior caso) e o arquivo previamente ordenado (melhor caso).
+
+3.  As ordenações serão realizadas com base no numero total de casos confirmados do dataset, no número de óbitos registrados e no nome das cidades.
+4. No caso padrão (médio caso) o programa escreverá os dados em arquivos .csv que ficará na pastaDoProjeto/DadosOrdenados/MedioCaso **(OBS: no PiorCaso e no MelhorCaso, os dados não serão escritos por não haver necessidade de repetição já que serão os mesmos dados obtidos pelo MedioCaso, apenas será feito para contalibizar o tempo).**
+5. Ao final dos 3 casos de ordenações, será exibido uma tabela com o tempo realizado para cada um dos algoritmos de ordenação (a tabela completa estará disponível ao final do programa em **pastaDoProjeto/DadosOrdenados/TimesExecution.txt**).
